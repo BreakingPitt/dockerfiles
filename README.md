@@ -1,6 +1,6 @@
 ![Build Status](https://travis-ci.org/BreakingPitt/dockerfile.svg?branch=master)](https://travis-ci.org/BreakingPitt/dockerfile)
 
-# Breaking_Pitt dockerfile learning repository.
+# Breaking Pitt dockerfile learning repository.
 
 This is a collection Dockerfiles sample configurations.
 
