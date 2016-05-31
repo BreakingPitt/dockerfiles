@@ -1,4 +1,4 @@
-![Build Status](https://travis-ci.org/BreakingPitt/dockerfile.svg?branch=master)](https://travis-ci.org/BreakingPitt/dockerfile)
+[![Build Status](https://travis-ci.org/BreakingPitt/dockerfile.svg?branch=master)](https://travis-ci.org/BreakingPitt/dockerfile)
 
 # Breaking_Pitt dockerfile learning repository.
 
