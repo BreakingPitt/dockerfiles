@@ -13,7 +13,8 @@ ENV LC_ALL en_US.UTF-8
 ENV DEBIAN_FRONTEND noninteractive
 
 # Add Firefox-Next ppa repository to sources.lists.d directory.
-RUN echo "deb http://ppa.launchpad.net/mozillateam/firefox-next/ubuntu xenial main" \
+RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 0AB215679C571D1C8325275B9BDB3D89CE49EC21 \ 
+    && echo "deb http://ppa.launchpad.net/mozillateam/firefox-next/ubuntu xenial main" \
     >> /etc/apt/sources.list.d/firefox.list
 
 # Update the apt indexes and install the required software.
