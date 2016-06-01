@@ -2,7 +2,7 @@
 FROM ubuntu:16.04
 
 # Maintainer of the Dockerfile.
-MAINTAiNER Pedro Garcia Rodriguez<pedgarrod@gmail.com>
+MAINTAINER Pedro Garcia Rodriguez<pedgarrod@gmail.com>
 
 # Set environment variables for locale settings.
 ENV LANG en_US.UTF-8
@@ -16,7 +16,8 @@ ENV KAFKA_VERSION 0.10.0
 # Add required Ubuntu package por PPA repository management
 # and other kind of required programs like wget.
 RUN apt-get update \
-    && apt-get install -y python-software-properties \
+    && apt-get install -y \
+    python-software-properties \
     software-properties-common \
     wget \
     --no-install-recommends \
@@ -28,13 +29,13 @@ RUN apt-get update \
 # in a single line execution for avoid unwanted layers in our docker image.
 RUN add-apt-repository ppa:webupd8team/java \
     && apt-get update \
-    && echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | /usr/bin/debconf-set-selections
-    && apt-get install -y oracle-java8-installer
+    && echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | /usr/bin/debconf-set-selections \
+    && apt-get install -y oracle-java8-installer \ 
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
 #Download Kafka version pinned in the KAFKA_VERSION environment variable.
-RUN wget -q -O - http://apache.mirrors.pair.com/kafka/$KAFKA_VERSION/kafka_2.10-0-$KAFKA_VERSION.tgz | tar -C /opt -xz \
+RUN wget -q -O - http://apache.mirrors.pair.com/kafka/$KAFKA_VERSION/kafka_2.10-0-$KAFKA_VERSION.tgz | tar -C /opt -xz
     && mv /opt/kafka_2.10-0-$KAFKA_VERSION /opt/kafka
 
 # Container cmd.
