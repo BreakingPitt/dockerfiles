@@ -20,7 +20,7 @@ RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 0AB215679C571D1C832
 # Update the apt indexes and install the required software.
 # Following the best practices for Dockerfiles we do all the apt stuff
 # in a single line execution for avoid unwanted layers in our docker image.
-RUN apt-get update  
+RUN apt-get update \
   && apt-get install -y \
   firefox \
   hicolor-icon-theme \
