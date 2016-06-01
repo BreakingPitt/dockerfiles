@@ -1,4 +1,4 @@
- Base image to be used.
+#Base image to be used.
 FROM ubuntu:16.04
 
 # Maintainer of the Dockerfile.
