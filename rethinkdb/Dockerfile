@@ -15,9 +15,7 @@ ENV DEBIAN_FRONTEND noninteractive
 # Configure RethinkDB apt repositories
 # and import the repository public key. 
 RUN apt-key adv --keyserver pgp.mit.edu --recv-keys 1614552E5765227AEC39EFCFA7E00EF33A8F2399 \
-    && source /etc/lsb-release \
-    && echo "deb http://download.rethinkdb.com/apt $DISTRIB_CODENAME main" \
-    >> /etc/apt/sources.list.d/rethinkdb.list
+    >> echo "deb http://download.rethinkdb.com/apt xenial main" > /etc/apt/sources.list.d/rethinkdb.list
 
 # Update the apt indexes and install the required software.
 # Following the best practices for Dockerfiles we do all the apt stuff
