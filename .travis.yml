@@ -5,3 +5,5 @@ services:
 before_install:
   - docker build -t breakingpitt/firefox firefox
   - docker build -t breakingpitt/kafka apache-kafka
+  - docker build -t breakingpitt/rethinkdb rethinkdb
+
