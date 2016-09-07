@@ -15,8 +15,7 @@ ENV DEBIAN_FRONTEND noninteractive
 # Configure MongoDB apt repositories
 # and import the repository public key. 
 RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10 \ 
-    && echo "deb http://repo.mongodb.org/apt/ubuntu "$(lsb_release -sc)"/mongodb-org/3.0 multiverse" \
-    | sudo tee /etc/apt/sources.list.d/mongodb-org-3.0.list
+    &&  echo "deb http://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.0 main" > /etc/apt/sources.list.d/mongodb-org-3.0.list
 
 # Update the package list and install the mongodb-10gen package.
 RUN apt-get update \
