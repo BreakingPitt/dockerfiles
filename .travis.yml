@@ -9,4 +9,5 @@ before_install:
   - docker build -t breakingpitt/mongo mongodb
   - docker build -t breakingpitt/redis redis
   - docker build -t breakingpitt/rethinkdb rethinkdb
+  - docker build -t breakingpitt/postgresql postgresql
 
