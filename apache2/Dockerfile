@@ -15,9 +15,9 @@ ENV DEBIAN_FRONTEND noninteractive
 # Update the apt indexes and install the Apache2 server.
 # Following the best practces for Dockerfiles we do all the apt stuff
 # in a single line execution.
-RUN apt-get update
-    && apt-get install -y apache2
-    && apt-get clean
+RUN apt-get update \
+    && apt-get install -y apache2 \
+    && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
 # Expose the default Apach2 Web Server port.
