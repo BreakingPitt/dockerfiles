@@ -1,5 +1,5 @@
 # Base image to be used.
-FROM java:8
+FROM ubuntu:latest
 
 # Maintainer of the Dockerfile.
 MAINTAINER Pedro Garcia Rodriguez<pedgarrod@gmail.com>
