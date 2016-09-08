@@ -1,5 +1,5 @@
 # Base image to be used.
-FROM ubuntu:16.04
+FROM ubuntu:14.04
 
 # Maintainer of the Dockerfile.
 MAINTAINER Pedro Garcia Rodriguez<pedgarrod@gmail.com>
