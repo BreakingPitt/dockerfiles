@@ -13,10 +13,11 @@ ENV LC_ALL en_US.UTF-8
 ENV DEBIAN_FRONTEND noninteractive
 
 # Add the PGP keys for the PostgreSQL repos.
-RUN apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys B97B0AFCAA1A47F044F244A07FCC7D46ACCC4CF8
-
-# Add a repository source list for mongodb.
-RUN echo "deb http://apt.postgresql.org/pub/repos/apt/ trusty-pgdg main" | sudo tee /etc/apt/sources.list.d/postgresql.list
+# Add a repository source list for PostgreSQL.
+RUN apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys \
+    B97B0AFCAA1A47F044F244A07FCC7D46ACCC4CF8 \
+    && echo "deb http://apt.postgresql.org/pub/repos/apt/ trusty-pgdg main" > \
+    /etc/apt/sources.list.d/postgresql.list
 
 # Apt operations...
 RUN apt-get update \
@@ -25,7 +26,8 @@ RUN apt-get update \
         postgresql-contrib-9.3 \ 
         python-software-properties \
         software-properties-common \
-    &&  rm -rf /var/lib/apt/lists/*
+     && apt-get clean \
+     && rm -rf /var/lib/apt/lists/*
 
 # User postgres...
 USER postgres
