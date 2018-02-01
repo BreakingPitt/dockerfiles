@@ -12,7 +12,7 @@ ENV LC_ALL en_US.UTF-8
 # Set environment variables for non interactive apt.
 ENV DEBIAN_FRONTEND noninteractive
 
-ENV KAFKA_VERSION 0.10.0
+ENV KAFKA_VERSION 0.10.2.1
 # Add required Ubuntu package por PPA repository management
 # and other kind of required programs like wget.
 RUN apt-get update \
@@ -35,7 +35,7 @@ RUN add-apt-repository ppa:webupd8team/java \
     && rm -rf /var/lib/apt/lists/*
 
 # Download Kafka tgz file.
-RUN wget -q -O -  http://apache.rediris.es/kafka/0.10.0.0/kafka_2.10-0.10.0.0.tgz  | tar -C /opt -xz
+RUN wget -q -O -  http://apache.rediris.es/kafka/0.10.2.1/kafka_2.10-0.10.2.1.tgz  | tar -C /opt -xz
 
 # Container cmd.
-CMD /opt/kafka_2.10-0.10.0.0/bin/kafka-server-start.sh /opt/kafka/config/server.properties
+CMD /opt/kafka_2.10-0.10.2.1/bin/kafka-server-start.sh /opt/kafka/config/server.properties
