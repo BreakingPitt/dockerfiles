@@ -17,6 +17,7 @@ before_install:
   - docker build -t breakingpitt/rethinkdb rethinkdb
   - docker build -t breakingpitt/postgresql postgresql
   - docker build -t breakingpitt/torquebox torquebox
+  - docker build -t breakingpitt/torquebox torquebox
 
 script:
   - docker version
