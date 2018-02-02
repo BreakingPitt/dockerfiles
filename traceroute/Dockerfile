@@ -11,7 +11,8 @@ ENV DEBIAN_FRONTEND noninteractive
 # Following the best practices for Dockerfiles we do all the apt stuff
 # in a single line execution for avoid unwanted layers in our docker image.
 RUN apt-get update \
-    && apt-get install -y traceroute --no-install-recommends \
+    && apt-get install -y --no-install-recommends \
+       traceroute \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* \
 
