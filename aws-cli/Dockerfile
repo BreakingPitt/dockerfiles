@@ -4,8 +4,13 @@ FROM ubuntu:latest
 # Maintainer of the Dockerfile.
 MAINTAINER Pedro Garcia Rodriguez<pedgarrod@gmail.com>
 
+# Update the apt indexes and install the AWS command line tool.
+# Following the best practces for Dockerfiles we do all the apt stuff
+# in a single line execution.
 RUN apt-get update \
-    && apt-get install -y awscli groff-base --no-install-recommends \
+    && apt-get install -y --no-install-recommends \
+       awscli \
+       groff-base \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
