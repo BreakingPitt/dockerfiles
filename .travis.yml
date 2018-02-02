@@ -18,5 +18,4 @@ before_install:
 #  - docker build -t breakingpitt/rethinkdb rethinkdb
 #  - docker build -t breakingpitt/postgresql postgresql
 #  - docker build -t breakingpitt/torquebox torquebox
-#  - docker build -t breakingpitt/traceroute traceroute
-#  - docker build -t breakingpitt/mtr mtr
+  - docker build -t breakingpitt/traceroute traceroute
