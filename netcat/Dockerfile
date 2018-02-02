@@ -11,18 +11,13 @@ ENV LANGUAGE en_US:en
 ENV LC_ALL en_US.UTF-8
 ENV DEBIAN_FRONTEND noninteractive
 
-# Set the correct time to avoid problems.
-RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
-
-# Configure locales to en_US.UTF-8.
-RUN locale-gen en_US.UTF-8
-
+# Install required packages.
 RUN apt-get update \
     && apt-get install -y netcat --no-install-recommends \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
-# Create work directory
+# Create work directory.
 RUN mkdir /work
 
 # Volume to store nmap data.
