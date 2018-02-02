@@ -9,6 +9,7 @@ env:
 
 before_install:
   - docker build -t breakingpitt/apache2 apache2
+  - docker build -t breakingpitt/aws-cli aws-cli
 #  - docker build -t breakingpitt/elasticsearch elasticsearch
 #  - docker build -t breakingpitt/firefox firefox
 #  - docker build -t breakingpitt/mongo mongodb
