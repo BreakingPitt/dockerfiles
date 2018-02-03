@@ -12,7 +12,7 @@ ENV DEBIAN_FRONTEND noninteractive
 # in a single line execution.
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
-       mtr-tiny
+       mtr-tiny \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
