@@ -12,6 +12,7 @@ before_install:
   - docker build -t breakingpitt/aws-cli aws-cli
   - docker build -t breakingpitt/elasticsearch elasticsearch
   - docker build -t breakingpitt/firefox firefox
+  - docker build -t breakingpitt/htop htop
   - docker build -t breakingpitt/kafka kafka
   - docker build -t breakingpitt/mongo mongodb
   - docker build -t breakingpitt/mtr-triny mtr
