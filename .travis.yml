@@ -18,6 +18,6 @@ before_install:
   - docker build -t breakingpitt/mtr-triny mtr
   - docker build -t breakingpitt/redis redis
   - docker build -t breakingpitt/rethinkdb rethinkdb
-#  - docker build -t breakingpitt/postgresql postgresql
+  - docker build -t breakingpitt/postgresql postgresql
 #  - docker build -t breakingpitt/torquebox torquebox
   - docker build -t breakingpitt/traceroute traceroute
