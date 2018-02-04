@@ -4,11 +4,6 @@ FROM ubuntu:16.04
 # Maintainer of the Dockerfile.
 MAINTAINER Pedro Garcia Rodriguez<pedgarrod@gmail.com>
 
-# Set environment variables for locale settings.
-ENV LANG en_US.UTF-8
-ENV LANGUAGE en_US:en
-ENV LC_ALL en_US.UTF-8
-
 # Set environment variables for non interactive apt.
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -21,13 +16,13 @@ RUN apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys \
 
 # Apt operations...
 RUN apt-get update \
-    && apt-get install -y postgresql-9.3 \
-        postgresql-client-9.3 \
-        postgresql-contrib-9.3 \ 
-        python-software-properties \
-        software-properties-common \
-     && apt-get clean \
-     && rm -rf /var/lib/apt/lists/*
+ && apt-get install -y postgresql-9.3 \
+    postgresql-client-9.3 \
+    postgresql-contrib-9.3 \ 
+    python-software-properties \
+    software-properties-common \
+ && apt-get clean \
+ && rm -rf /var/lib/apt/lists/*
 
 # User postgres...
 USER postgres
