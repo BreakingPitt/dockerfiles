@@ -2,12 +2,8 @@ language: generic
 sudo: required
 services:
   - docker
-env:
-  global:
-      - DOCKER_VERSION=1.12.1-0~trusty
-      - DOCKER_COMPOSE_VERSION=1.6.0
 
-before_install:
+script:
   - docker build -t breakingpitt/apache2 apache2
   - docker build -t breakingpitt/aws-cli aws-cli
   - docker build -t breakingpitt/elasticsearch elasticsearch
@@ -20,5 +16,8 @@ before_install:
   - docker build -t breakingpitt/rethinkdb rethinkdb
   - docker build -t breakingpitt/packer packer
   - docker build -t breakingpitt/postgresql postgresql
-#  - docker build -t breakingpitt/torquebox torquebox
+  - docker build -t breakingpitt/torquebox torquebox
   - docker build -t breakingpitt/traceroute traceroute
+
+after-script:
+  - docker images
