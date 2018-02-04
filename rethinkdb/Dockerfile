@@ -4,11 +4,6 @@ FROM ubuntu:16.04
 # Maintainer of the Dockerfile.
 MAINTAINER Pedro Garcia Rodriguez<pedgarrod@gmail.com>
 
-# Set environment variables for locale settings.
-ENV LANG en_US.UTF-8
-ENV LANGUAGE en_US:en
-ENV LC_ALL en_US.UTF-8
-
 # Set environment variables for non interactive apt.
 ENV DEBIAN_FRONTEND noninteractive
 
@@ -21,9 +16,8 @@ RUN apt-key adv --keyserver pgp.mit.edu --recv-keys 1614552E5765227AEC39EFCFA7E0
 # Following the best practices for Dockerfiles we do all the apt stuff
 # in a single line execution for avoid unwanted layers in our docker image.
 RUN apt-get update \
-    && apt-get install -y \
-    rethinkdb \
-    --no-install-recommends \
+    && apt-get install -y --no-install-recommends \
+       rethinkdb \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
