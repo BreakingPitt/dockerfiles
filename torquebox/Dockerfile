@@ -2,7 +2,7 @@
 FROM ubuntu:14.04
 
 # Maintainer of the Dockerfile.
-MAINTAINER Pedro Garcia Rodriguez<pedgarrod@gmail.com>
+LABEL maintainer "Pedro Garcia Rodriguez <pedgarrod@gmail.com>"
 
 # Based on the work done by...
 MAINTAINER Michael Guymon, michael@tobedevoured.com
@@ -10,18 +10,8 @@ MAINTAINER Michael Guymon, michael@tobedevoured.com
 # Operate with root user.
 USER root
 
-# Set environment variables for timezone configuration.
-ENV TZ Europe/Madrid
-ENV LANG en_US.UTF-8
-ENV LANGUAGE en_US:en
-ENV LC_ALL en_US.UTF-8
+# Set environment variables.
 ENV DEBIAN_FRONTEND noninteractive
-
-# Set the correct time to avoid problems.
-RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
-
-# Configure locales to en_US.UTF-8.
-RUN locale-gen en_US.UTF-8
 
 # Set environment variables for JBoss Torquebox...
 ENV TORQUEBOX_HOME /opt/torquebox
