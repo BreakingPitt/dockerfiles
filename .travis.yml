@@ -10,6 +10,7 @@ script:
   - docker build -t breakingpitt/clamav clamav  
   - docker build -t breakingpitt/elasticsearch elasticsearch
   - docker build -t breakingpitt/firefox firefox
+  - docker build -t breakingpitt/grip grip  
   - docker build -t breakingpitt/htop htop
   - docker build -t breakingpitt/irssi irssi
   - docker build -t breakingpitt/kafka kafka
