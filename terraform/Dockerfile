@@ -2,7 +2,7 @@
 FROM ubuntu:latest
 
 # Maintainer of the Dockerfile.
-MAINTAINER Pedro Garcia Rodriguez<pedgarrod@gmail.com>
+LABEL maintainer "Pedro Garcia Rodriguez <pedgarrod@gmail.com>"
 
 # Set environment variables for non interactive.
 ENV DEBIAN_FRONTEND noninteractive
@@ -11,7 +11,9 @@ ENV DEBIAN_FRONTEND noninteractive
 # Following the best practices for Dockerfiles we do all the apt stuff
 # in a single line execution for avoid unwanted layers in our docker image.
 RUN apt-get update \
-    && apt-get install -y wget unzip \
+    && apt-get install -y --no-install-recommends \
+       wget \
+       unzip \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* \
     && wget -P /tmp/ https://releases.hashicorp.com/terraform/0.7.4/terraform_0.7.4_linux_amd64.zip \
