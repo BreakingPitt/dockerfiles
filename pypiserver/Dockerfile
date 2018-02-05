@@ -7,10 +7,6 @@ LABEL maintainer "Pedro Garcia Rodriguez <pedgarrod@gmail.com>"
 # Operate with root user.
 USER root
 
-# Set environment variables for noninteactive user choices
-# in package managementenoninteactive user choices.
-ENV DEBIAN_FRONTEND noninteractive
-
 # Install pypiserver.
 RUN pip install -U pypiserver \
     && pip install passlib
