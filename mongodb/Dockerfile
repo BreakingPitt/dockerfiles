@@ -2,7 +2,7 @@
 FROM ubuntu:14.04
 
 # Maintainer of the Dockerfile.
-MAINTAINER Pedro Garcia Rodriguez<pedgarrod@gmail.com>
+LABEL maintainer "Pedro Garcia Rodriguez <pedgarrod@gmail.com>"
 
 # Set environment variables for non interactive apt.
 ENV DEBIAN_FRONTEND noninteractive
