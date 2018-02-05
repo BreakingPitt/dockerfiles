@@ -25,7 +25,8 @@ script:
   - docker build -t breakingpitt/postgresql postgresql
   - docker build -t breakingpitt/redis redis
   - docker build -t breakingpitt/transmission-daemon transmission-daemon
-  - docker build -t breakingpitt/rethinkdb rethinkdb  
+  - docker build -t breakingpitt/rethinkdb rethinkdb
+  - docker build -t breakingpitt/stress stress
   - docker build -t breakingpitt/terraform terraform
   - docker build -t breakingpitt/torquebox torquebox
   - docker build -t breakingpitt/traceroute traceroute
