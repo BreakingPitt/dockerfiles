@@ -6,6 +6,7 @@ services:
 script:
   - docker build -t breakingpitt/apache2 apache2
   - docker build -t breakingpitt/aws-cli aws-cli
+  - docker build -t breakingpitt/clamav clamav  
   - docker build -t breakingpitt/elasticsearch elasticsearch
   - docker build -t breakingpitt/firefox firefox
   - docker build -t breakingpitt/htop htop
@@ -13,7 +14,6 @@ script:
   - docker build -t breakingpitt/mongo mongodb
   - docker build -t breakingpitt/mtr-triny mtr
   - docker build -t breakingpitt/netcat netcat
-  - docker build -t breakingpitt/nexus nexus
   - docker build -t breakingpitt/nginx-extras nginx-extras
   - docker build -t breakingpitt/nginx nginx
   - docker build -t breakingpitt/nmap nmap  
