@@ -26,6 +26,7 @@ script:
   - docker build -t breakingpitt/terraform terraform
   - docker build -t breakingpitt/torquebox torquebox
   - docker build -t breakingpitt/traceroute traceroute
+  - docker build -t breakingpitt/vault vault
 
 after-script:
   - docker images
