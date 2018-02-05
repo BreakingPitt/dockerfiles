@@ -2,9 +2,9 @@ language: generic
 sudo: required
 services:
   - docker
-
 script:
   - docker build -t breakingpitt/apache2 apache2
+  - docker build -t breakingpitt/apache-benchmark apache-benchmark
   - docker build -t breakingpitt/aws-cli aws-cli
   - docker build -t breakingpitt/azure-cli azure-cli
   - docker build -t breakingpitt/clamav clamav  
@@ -29,6 +29,5 @@ script:
   - docker build -t breakingpitt/torquebox torquebox
   - docker build -t breakingpitt/traceroute traceroute
   - docker build -t breakingpitt/vault vault
-
 after-script:
   - docker images
