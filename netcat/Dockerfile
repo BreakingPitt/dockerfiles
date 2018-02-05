@@ -2,7 +2,7 @@
 FROM ubuntu:latest
 
 # Maintainer of the Dockerfile.
-MAINTAINER Pedro Garcia Rodriguez<pedgarrod@gmail.com>
+LABEL maintainer "Pedro Garcia Rodriguez <pedgarrod@gmail.com>"
 
 # Set environment variables for timezone configuration.
 ENV TZ Europe/Madrid
