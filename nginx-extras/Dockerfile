@@ -2,14 +2,14 @@
 FROM ubuntu:latest
 
 # Maintainer of the Dockerfile.
-MAINTAINER Pedro Garcia Rodriguez<pedgarrod@gmail.com>
+LABEL maintainer "Pedro Garcia Rodriguez <pedgarrod@gmail.com>"
 
 RUN apt-get update \
-    && apt-get install -y ca-certificates \
-                          lua-cjson \
-                          lua-iconv \
-                          nginx-extras \
-       --no-install-recommends \
+    && apt-get install -y --no-install-recommends \
+       ca-certificates \
+       lua-cjson \
+       lua-iconv \
+       nginx-extras \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
