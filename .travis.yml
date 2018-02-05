@@ -12,10 +12,17 @@ script:
   - docker build -t breakingpitt/kafka kafka
   - docker build -t breakingpitt/mongo mongodb
   - docker build -t breakingpitt/mtr-triny mtr
-  - docker build -t breakingpitt/redis redis
-  - docker build -t breakingpitt/rethinkdb rethinkdb
+  - docker build -t breakingpitt/netcat netcat
+  - docker build -t breakingpitt/nexus nexus
+  - docker build -t breakingpitt/nginx-extras nginx-extras
+  - docker build -t breakingpitt/nginx nginx
+  - docker build -t breakingpitt/nmap nmap  
   - docker build -t breakingpitt/packer packer
+  - docker build -t breakingpitt/pypiserver pypiserver  
   - docker build -t breakingpitt/postgresql postgresql
+  - docker build -t breakingpitt/redis redis
+  - docker build -t breakingpitt/rethinkdb rethinkdb  
+  - docker build -t breakingpitt/terraform terraform
   - docker build -t breakingpitt/torquebox torquebox
   - docker build -t breakingpitt/traceroute traceroute
 
