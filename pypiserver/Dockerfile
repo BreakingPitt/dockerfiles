@@ -2,7 +2,7 @@
 FROM python:2.7
 
 # Maintainer of the Dockerfile.
-MAINTAINER Pedro Garcia Rodriguez<pedgarrod@gmail.com>
+LABEL maintainer "Pedro Garcia Rodriguez <pedgarrod@gmail.com>"
 
 # Operate with root user.
 USER root
