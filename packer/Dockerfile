@@ -16,7 +16,7 @@ RUN apt-get update \
        unzip \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* \
-    && wget -P /tmp/ https://releases.hashicorp.com/packer/0.10.2/packer_0.10.2_linux_amd64.zip \
+    && wget --no-check-certificate -P /tmp/ https://releases.hashicorp.com/packer/0.10.2/packer_0.10.2_linux_amd64.zip \
     && mkdir -p /opt/packer \
     && unzip /tmp/packer_0.10.2_linux_amd64.zip -d /opt/packer
 
