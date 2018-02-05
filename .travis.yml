@@ -14,7 +14,8 @@ script:
   - docker build -t breakingpitt/htop htop
   - docker build -t breakingpitt/irssi irssi
   - docker build -t breakingpitt/kafka kafka
-  - docker build -t breakingpitt/mongo mongodb
+  - docker build -t breakingpitt/mongodb-client mongodb-client
+  - docker build -t breakingpitt/mongodb mongodb
   - docker build -t breakingpitt/mtr-triny mtr
   - docker build -t breakingpitt/mutt mutt
   - docker build -t breakingpitt/netcat netcat
