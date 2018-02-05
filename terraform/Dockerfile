@@ -16,7 +16,7 @@ RUN apt-get update \
        unzip \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* \
-    && wget -P /tmp/ https://releases.hashicorp.com/terraform/0.7.4/terraform_0.7.4_linux_amd64.zip \
+    && wget --no-check-certificate -P /tmp/ https://releases.hashicorp.com/terraform/0.7.4/terraform_0.7.4_linux_amd64.zip \
     && mkdir -p /opt/terraform \
     && unzip /tmp/terraform_0.7.4_linux_amd64.zip -d /opt/terraform 
 
