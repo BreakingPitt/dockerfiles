@@ -19,6 +19,7 @@ script:
   - docker build -t breakingpitt/nmap nmap  
   - docker build -t breakingpitt/packer packer
   - docker build -t breakingpitt/pypiserver pypiserver  
+  - docker build -t breakingpitt/postgresql-client postgresql-client
   - docker build -t breakingpitt/postgresql postgresql
   - docker build -t breakingpitt/redis redis
   - docker build -t breakingpitt/rethinkdb rethinkdb  
