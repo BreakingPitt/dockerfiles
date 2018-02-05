@@ -2,7 +2,7 @@
 FROM ubuntu:latest
 
 # Maintainer of the Dockerfile.
-MAINTAINER Pedro Garcia Rodriguez<pedgarrod@gmail.com>
+LABEL maintainer "Pedro Garcia Rodriguez <pedgarrod@gmail.com>"
 
 # Update the apt indexes and install the AWS command line tool.
 # Following the best practces for Dockerfiles we do all the apt stuff
