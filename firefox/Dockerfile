@@ -2,7 +2,7 @@
 FROM ubuntu:16.04
 
 # Maintainer of the Dockerfile.
-MAINTAiNER Pedro Garcia Rodriguez<pedgarrod@gmail.com>
+LABEL maintainer "Pedro Garcia Rodriguez <pedgarrod@gmail.com>"
 
 # Set environment variables for non interactive apt.
 ENV DEBIAN_FRONTEND noninteractive
