@@ -7,6 +7,10 @@ LABEL maintainer "Pedro Garcia Rodriguez <pedgarrod@gmail.com>"
 # Set environment variables for non interactive apt.
 ENV DEBIAN_FRONTEND noninteractive
 
+# Metadata information.
+LABEL org.label-schema.vcs-ref=$VCS_REF \
+      org.label-schema.vcs-url="https://github.com/breakingpitt/dockerfiles"
+
 # Add the PGP keys for the PostgreSQL repos.
 # Add a repository source list for PostgreSQL.
 RUN apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys \
