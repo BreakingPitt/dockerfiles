@@ -7,6 +7,10 @@ LABEL maintainer "Pedro Garcia Rodriguez <pedgarrod@gmail.com>"
 # Set environment variables for non interactive.
 ENV DEBIAN_FRONTEND noninteractive
 
+# Metadata information.
+LABEL org.label-schema.vcs-ref=$VCS_REF \
+      org.label-schema.vcs-url="https://github.com/breakingpitt/dockerfiles"
+
 # Update the apt indexes and install the required software.
 # Following the best practices for Dockerfiles we do all the apt stuff
 # in a single line execution for avoid unwanted layers in our docker image.
