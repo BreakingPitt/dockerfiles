@@ -1,5 +1,5 @@
 # Base image to be used.
-FROM ubuntu:latest
+FROM ubuntu:17.10
 
 # Maintainer of the Dockerfile.
 LABEL maintainer "Pedro Garcia Rodriguez <pedgarrod@gmail.com>"
