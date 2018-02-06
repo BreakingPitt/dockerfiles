@@ -20,7 +20,8 @@ script:
   - docker build -t breakingpitt/mtr-alpine mtr/alpine
   - docker build -t breakingpitt/mtr-ubuntu mtr/ubuntu
   - docker build -t breakingpitt/mutt mutt
-  - docker build -t breakingpitt/netcat netcat
+  - docker build -t breakingpitt/netcat-alpine netcat/alpine
+  - docker build -t breakingpitt/netcat-ubuntu netcat/ubuntu  
   - docker build -t breakingpitt/nginx-extras nginx-extras
   - docker build -t breakingpitt/nginx nginx
   - docker build -t breakingpitt/nmap nmap  
