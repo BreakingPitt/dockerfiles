@@ -13,14 +13,5 @@ RUN apt-get update \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
-# Create work directory
-RUN mkdir /work
-
-# Volume to store nmap data.
-VOLUME ["/work"]
-
-# Set workdir directory.
-WORKDIR /work
-
 # Default command for the container.
 ENTRYPOINT ["nmap"]
