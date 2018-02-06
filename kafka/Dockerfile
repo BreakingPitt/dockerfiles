@@ -7,6 +7,10 @@ LABEL maintainer "Pedro Garcia Rodriguez <pedgarrod@gmail.com>"
 # Set environment variables for non interactive apt.
 ENV DEBIAN_FRONTEND noninteractive
 
+# Metadata information.
+LABEL org.label-schema.vcs-ref=$VCS_REF \
+      org.label-schema.vcs-url="https://github.com/breakingpitt/dockerfiles"
+
 ENV KAFKA_VERSION 0.10.2.1
 # Add required Ubuntu package por PPA repository management
 # and other kind of required programs like wget.
