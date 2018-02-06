@@ -4,6 +4,10 @@ FROM python:2.7
 # Maintainer of the Dockerfile.
 LABEL maintainer "Pedro Garcia Rodriguez <pedgarrod@gmail.com>"
 
+# Metadata information.
+LABEL org.label-schema.vcs-ref=$VCS_REF \
+      org.label-schema.vcs-url="https://github.com/breakingpitt/dockerfiles"
+
 # Operate with root user.
 USER root
 
