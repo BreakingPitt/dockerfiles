@@ -13,6 +13,10 @@ USER root
 # Set environment variables.
 ENV DEBIAN_FRONTEND noninteractive
 
+# Metadata information.
+LABEL org.label-schema.vcs-ref=$VCS_REF \
+      org.label-schema.vcs-url="https://github.com/breakingpitt/dockerfiles"
+
 # Set environment variables for JBoss Torquebox...
 ENV TORQUEBOX_HOME /opt/torquebox
 ENV JBOSS_HOME /opt/torquebox/jboss
