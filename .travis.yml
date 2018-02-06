@@ -17,7 +17,8 @@ script:
   - docker build -t breakingpitt/kafka kafka
   - docker build -t breakingpitt/mongodb-client mongodb-client
   - docker build -t breakingpitt/mongodb mongodb
-  - docker build -t breakingpitt/mtr-triny mtr
+  - docker build -t breakingpitt/mtr-alpine mtr/alpine
+  - docker build -t breakingpitt/mtr-ubuntu mtr/ubuntu
   - docker build -t breakingpitt/mutt mutt
   - docker build -t breakingpitt/netcat netcat
   - docker build -t breakingpitt/nginx-extras nginx-extras
