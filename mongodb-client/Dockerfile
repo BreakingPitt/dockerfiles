@@ -7,6 +7,10 @@ LABEL maintainer "Pedro Garcia Rodriguez <pedgarrod@gmail.com>"
 # Set environment variables for non interactive apt.
 ENV DEBIAN_FRONTEND noninteractive
 
+# Metadata information.
+LABEL org.label-schema.vcs-ref=$VCS_REF \
+      org.label-schema.vcs-url="https://github.com/breakingpitt/dockerfiles"
+
 # Configure MongoDB apt repositories
 # and import the repository public key.
 RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10 \
