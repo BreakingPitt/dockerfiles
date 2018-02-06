@@ -15,7 +15,7 @@ RUN apk update \
     && apk add --update \
        apache2 \
        apache2-ssl \
-	     ca-certificates \
+       ca-certificates \
     && rm -rf /var/cache/apk/*
 
 # Default command for the container.
