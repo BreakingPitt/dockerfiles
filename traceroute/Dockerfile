@@ -18,3 +18,6 @@ RUN apt-get update \
 
 # Entrypoint command for the container.
 ENTRYPOINT [ "traceroute" ]
+
+# Configure Dockerfile cmd
+CMD ["--help"]
