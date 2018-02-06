@@ -4,12 +4,26 @@ FROM ubuntu:16.04
 # Maintainer of the Dockerfile.
 LABEL maintainer "Pedro Garcia Rodriguez <pedgarrod@gmail.com>"
 
+# Metadata information.
+LABEL org.label-schema.vcs-ref=$VCS_REF \
+      org.label-schema.vcs-url="https://github.com/breakingpitt/dockerfiles"
+
 # Operate with root user.
 USER root
 
 # Set environment variables for noninteactive user choices
 # in package managementenoninteactive user choices.
 ENV DEBIAN_FRONTEND noninteractive
+
+# Update the apt indexes and install the required software.
+# Following the best practices for Dockerfiles we do all the apt stuff
+# in a single line execution for avoid unwanted layers in our docker image.
+RUN apt-get update \
+    && apt-get install -y \
+    curl \
+    tar \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
 
 # Set environment variables for Sonatype Nexus configuration.
 ENV SONATYPE_WORK /sonatype-work
@@ -27,16 +41,6 @@ ENV MAX_HEAP 768m
 ENV MIN_HEAP 256m
 ENV JAVA_OPTS -server -Djava.net.preferIPv4Stack=true
 ENV LAUNCHER_CONF ./conf/jetty.xml ./conf/jetty-requestlog.xml
-
-# Update the apt indexes and install the required software.
-# Following the best practices for Dockerfiles we do all the apt stuff
-# in a single line execution for avoid unwanted layers in our docker image.
-RUN apt-get update \
-    && apt-get install -y \
-    curl \
-    tar \
-    && apt-get clean \
-    && rm -rf /var/lib/apt/lists/*
 
 # install Oracle JRE
 RUN mkdir -p /opt \
