@@ -7,4 +7,17 @@ This is a collection Dockerfiles sample configurations.
 
 To be used with Docker http://www.docker.io
 
-# Docmentation of how to build images.
+# Doucmentation of how to build images.
+
+Build an image is pretty simple:
+
+    cd mtr/alpine
+    docker build -t breakingpitt/mtr-alpine .
+
+Run the previously created image and attach to it at the same time:
+
+    docker run -i -t breakingpitt/mtr-alpine:latest
+    
+Run the previously created image in the background
+  
+    docker run -d breakingpitt/mtr-alpine:latest
