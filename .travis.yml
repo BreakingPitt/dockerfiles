@@ -11,8 +11,8 @@ script:
   - docker build -t breakingpitt/elasticsearch elasticsearch
   - docker build -t breakingpitt/firefox firefox
   - docker build -t breakingpitt/grip grip  
-  - docker build -t breakingpitt/htop htop/alpine
-  - docker build -t breakingpitt/htop htop/ubuntu
+  - docker build -t breakingpitt/htop-alpine htop/alpine
+  - docker build -t breakingpitt/htop-ubuntu htop/ubuntu
   - docker build -t breakingpitt/irssi irssi
   - docker build -t breakingpitt/kafka kafka
   - docker build -t breakingpitt/mongodb-client mongodb-client
@@ -33,7 +33,8 @@ script:
   - docker build -t breakingpitt/stress stress
   - docker build -t breakingpitt/terraform terraform
   - docker build -t breakingpitt/torquebox torquebox
-  - docker build -t breakingpitt/traceroute traceroute
+  - docker build -t breakingpitt/traceroute-alpine traceroute/alpine
+  - docker build -t breakingpitt/traceroute-ubuntu traceroute/ubuntu
   - docker build -t breakingpitt/vault vault
 after-script:
   - docker images
