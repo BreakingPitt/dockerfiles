@@ -3,40 +3,5 @@ sudo: required
 services:
   - docker
 script:
-  - docker build -t breakingpitt/apache2 apache2
-  - docker build -t breakingpitt/apache-benchmark apache-benchmark
-  - docker build -t breakingpitt/aws-cli aws-cli
-  - docker build -t breakingpitt/azure-cli azure-cli
-  - docker build -t breakingpitt/clamav clamav  
-  - docker build -t breakingpitt/elasticsearch elasticsearch
-  - docker build -t breakingpitt/firefox firefox
-  - docker build -t breakingpitt/grip grip  
-  - docker build -t breakingpitt/htop-alpine htop/alpine
-  - docker build -t breakingpitt/htop-ubuntu htop/ubuntu
-  - docker build -t breakingpitt/irssi irssi
-  - docker build -t breakingpitt/kafka kafka
-  - docker build -t breakingpitt/mongodb-client mongodb-client
-  - docker build -t breakingpitt/mongodb mongodb
-  - docker build -t breakingpitt/mtr-alpine mtr/alpine
-  - docker build -t breakingpitt/mtr-ubuntu mtr/ubuntu
-  - docker build -t breakingpitt/mutt mutt
-  - docker build -t breakingpitt/netcat-alpine netcat/alpine
-  - docker build -t breakingpitt/netcat-ubuntu netcat/ubuntu  
-  - docker build -t breakingpitt/nginx-extras nginx-extras
-  - docker build -t breakingpitt/nginx nginx
-  - docker build -t breakingpitt/nmap nmap  
-  - docker build -t breakingpitt/packer packer
-  - docker build -t breakingpitt/pypiserver pypiserver  
-  - docker build -t breakingpitt/postgresql-client postgresql-client
-  - docker build -t breakingpitt/postgresql postgresql
-  - docker build -t breakingpitt/redis redis
-  - docker build -t breakingpitt/transmission-daemon transmission-daemon
-  - docker build -t breakingpitt/rethinkdb rethinkdb
-  - docker build -t breakingpitt/stress stress
-  - docker build -t breakingpitt/terraform terraform
-  - docker build -t breakingpitt/torquebox torquebox
-  - docker build -t breakingpitt/traceroute-alpine traceroute/alpine
-  - docker build -t breakingpitt/traceroute-ubuntu traceroute/ubuntu
-  - docker build -t breakingpitt/vault vault
-after-script:
-  - docker images
+  - ./build.sh  
+
