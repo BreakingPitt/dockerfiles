@@ -7,6 +7,10 @@ LABEL maintainer "Pedro Garcia Rodriguez <pedgarrod@gmail.com>"
 # Set environment variables for non interactive apt.
 ENV DEBIAN_FRONTEND noninteractive
 
+# Metadata information.
+LABEL org.label-schema.vcs-ref=$VCS_REF \
+      org.label-schema.vcs-url="https://github.com/breakingpitt/dockerfiles"
+      
 # Configure RethinkDB apt repositories
 # and import the repository public key. 
 RUN apt-key adv --keyserver pgp.mit.edu --recv-keys 1614552E5765227AEC39EFCFA7E00EF33A8F2399 \
