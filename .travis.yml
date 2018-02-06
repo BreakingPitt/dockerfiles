@@ -3,5 +3,5 @@ sudo: required
 services:
   - docker
 script:
-  - ./build.sh  
+  - bash ./build.sh  
 
