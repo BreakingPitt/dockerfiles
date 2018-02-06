@@ -19,7 +19,7 @@ RUN apk update \
     && rm -rf /var/cache/apk/*
 
 # Default command for the container.
-ENTRYPOINT ["/usr/bin/apache2"]
+ENTRYPOINT ["apache2"]
 
 # Configure Dockerfile cmd.
 CMD ["--help"]
