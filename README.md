@@ -7,7 +7,7 @@ This is a collection Dockerfiles sample configurations.
 
 To be used with Docker http://www.docker.io
 
-# Doucmentation of how to build images.
+# Documentation of how to build images.
 
 Build an image is pretty simple:
 
