@@ -14,7 +14,7 @@ LABEL org.label-schema.vcs-ref=$VCS_REF \
 RUN apk update \
     && apk add --update \
        wget \
-	     ca-certificates \
+       ca-certificates \
     && rm -rf /var/cache/apk/*
 
 # Default command for the container.
