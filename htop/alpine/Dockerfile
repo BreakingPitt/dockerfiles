@@ -2,7 +2,7 @@
 FROM alpine:3.7
 
 # Maintainer of the Dockerfile.
-LABEL maintainer "Pedro Garcia Rodriguez <pedgarrod@gmail.com>"
+LABEL maintainer="Pedro Garcia Rodriguez <pedgarrod@gmail.com>"
 
 # Update the apk indexes and installs htop.
 # Following the best practices for Dockerfiles we do all the apk stuff

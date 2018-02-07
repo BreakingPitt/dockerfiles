@@ -2,7 +2,7 @@
 FROM ubuntu:14.04
 
 # Maintainer of the Dockerfile.
-LABEL maintainer "Pedro Garcia Rodriguez <pedgarrod@gmail.com>"
+LABEL maintainer="Pedro Garcia Rodriguez <pedgarrod@gmail.com>"
 
 # Based on the work done by...
 MAINTAINER Michael Guymon, michael@tobedevoured.com

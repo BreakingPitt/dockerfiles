@@ -2,7 +2,7 @@
 FROM python:2.7
 
 # Maintainer of the Dockerfile.
-LABEL maintainer "Pedro Garcia Rodriguez <pedgarrod@gmail.com>"
+LABEL maintainer="Pedro Garcia Rodriguez <pedgarrod@gmail.com>"
 
 # Metadata information.
 LABEL org.label-schema.vcs-ref=$VCS_REF \
