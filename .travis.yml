@@ -3,5 +3,11 @@ sudo: required
 services:
   - docker
 script:
-  - bash ./build.sh  
+  - bash ./build.sh
+git:
+  depth: 3
+  submodules: false
+branches:
+  only:
+    - master
 
