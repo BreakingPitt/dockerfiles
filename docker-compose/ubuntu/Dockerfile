@@ -18,7 +18,7 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 
 # Set Docker Compose installation  env vars.
-ENV DOCKER_VERSION 1.8.0
+ENV DOCKER_VERSION 1.18.0
 
 # Configure Docker Compose install.
 RUN curl -L https://github.com/docker/compose/releases/download/${DOCKER_VERSION}/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose \
