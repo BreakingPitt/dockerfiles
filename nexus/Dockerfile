@@ -33,8 +33,8 @@ ENV NEXUS_VERSION 2.13.0-01
 ENV JAVA_HOME /opt/java
 
 ENV JAVA_VERSION_MAJOR 8
-ENV JAVA_VERSION_MINOR 74
-ENV JAVA_VERSION_BUILD 02
+ENV JAVA_VERSION_MINOR 131
+ENV JAVA_VERSION_BUILD 11
 
 ENV CONTEXT_PATH /nexus
 ENV MAX_HEAP 768m
@@ -46,7 +46,7 @@ ENV LAUNCHER_CONF ./conf/jetty.xml ./conf/jetty-requestlog.xml
 RUN mkdir -p /opt \
     && curl --fail --silent --location --retry 3 \
     --header "Cookie: oraclelicense=accept-securebackup-cookie; " \
-    http://download.oracle.com/otn-pub/java/jdk/${JAVA_VERSION_MAJOR}u${JAVA_VERSION_MINOR}-b${JAVA_VERSION_BUILD}/server-jre-${JAVA_VERSION_MAJOR}u${JAVA_VERSION_MINOR}-linux-x64.tar.gz \
+    http://download.oracle.com/otn-pub/java/jdk/${JAVA_VERSION_MAJOR}u${JAVA_VERSION_MINOR}-b${JAVA_VERSION_BUILD}/d54c1d3a095b4ff2b6607d096fa80163/server-jre-${JAVA_VERSION_MAJOR}u${JAVA_VERSION_MINOR}-linux-x64.tar.gz \
     | gunzip \
     | tar -x -C /opt \
     && ln -s /opt/jdk1.${JAVA_VERSION_MAJOR}.0_${JAVA_VERSION_MINOR} ${JAVA_HOME}
