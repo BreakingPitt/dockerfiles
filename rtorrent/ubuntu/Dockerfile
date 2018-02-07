@@ -36,6 +36,9 @@ RUN adduser --home $RTORRENT_HOME_DIR --shell /bin/sh --disabled-password --geco
 # Copy configuration file to rTorrent home directory.
 COPY rtorrent.rc $RTORRENT_HOME_DIR/.rtorrent.rc
 
+# Volume to store rTorrent data.
+VOLUME /torrents
+
 # Run as rTorrent user.
 USER $RTORRENT_USER
 
