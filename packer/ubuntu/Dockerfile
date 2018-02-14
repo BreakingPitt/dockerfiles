@@ -1,28 +1,25 @@
 # Base image to be used.
-FROM ubuntu:latest
+FROM ubuntu:17.10
 
 # Maintainer of the Dockerfile.
 LABEL maintainer="Pedro Garcia Rodriguez <pedgarrod@gmail.com>"
 
-# Set environment variables for non interactive.
-ENV DEBIAN_FRONTEND noninteractive
-
-# Metadata information.
-LABEL org.label-schema.vcs-ref=$VCS_REF \
-      org.label-schema.vcs-url="https://github.com/breakingpitt/dockerfiles"
+# Set environment variable for downloading terraform version.
+ENV PACKER_VERSION=1.2.0
 
 # Update the apt indexes and install the required software.
 # Following the best practices for Dockerfiles we do all the apt stuff
 # in a single line execution for avoid unwanted layers in our docker image.
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
-       wget \
+       ca-certificates \
+       curl \
        unzip \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* \
-    && wget --no-check-certificate -P /tmp/ https://releases.hashicorp.com/packer/0.10.2/packer_0.10.2_linux_amd64.zip \
+    && curl -o /tmp/packer_${PACKER_VERSION}_linux_amd64.zip https://releases.hashicorp.com/packer/${PACKER_VERSION}/packer_${PACKER_VERSION}_linux_amd64.zip \
     && mkdir -p /opt/packer \
-    && unzip /tmp/packer_0.10.2_linux_amd64.zip -d /opt/packer
+    && unzip /tmp/packer_${PACKER_VERSION}_linux_amd64.zip -d /opt/packer
 
 # Volume to store Terraform data.
 VOLUME ["/data"]
