@@ -17,7 +17,7 @@ RUN groupadd -r scout2 \
 USER scout2
 
 # Entrypoint command for the container.
-ENTRYPOINT ["Scout"]
+ENTRYPOINT ["Scout2"]
 
 # Default command for the container.
 CMD ["--help"]
